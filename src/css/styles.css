@@ -5,21 +5,18 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+.nav {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  color: #4d5ae5;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.nav-list:hover {
+  color: rgb(45, 12, 195);
 }
