@@ -6,6 +6,7 @@
 */
 @import url('./reset.css');
 @import url(./1-timer.css);
+@import url(./2-snackbar.css);
 
 .nav {
   display: flex;
@@ -19,5 +20,18 @@
 }
 
 .nav-list:hover {
+  color: rgb(45, 12, 195);
+}
+
+.home {
+  display: block;
+  width: 120px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  color: #4d5ae5;
+}
+
+.home:hover {
   color: rgb(45, 12, 195);
 }

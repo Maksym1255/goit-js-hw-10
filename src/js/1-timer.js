@@ -27,15 +27,13 @@ const options = {
       iziToast.error({
         title: `ERROR`,
         message: `Please choose a date in the future`,
-        overlay: true,
-        zindex: 9999,
-        position: `center`,
+        position: `topRight`,
       });
     } else {
       iziToast.success({
         title: `OK`,
         message: `Please enter Start`,
-        position: `center`,
+        position: `topRight`,
       });
       refs.startBtn.disabled = false;
     }
@@ -45,18 +43,9 @@ const options = {
 flatpickr(refs.dateTimePicker, options);
 
 refs.startBtn.addEventListener(`click`, () => {
-  if (selectedDate <= new Date()) {
-    iziToast.error({
-      title: `ERROR`,
-      message: `Please choose a date in the future`,
-      position: `center`,
-    });
-    return;
-  } else {
-    refs.startBtn.disabled = true;
-    refs.dateTimePicker.disabled = true;
-    timeInterval = setInterval(updateTimer, 1000);
-  }
+  refs.startBtn.disabled = true;
+  refs.dateTimePicker.disabled = true;
+  timeInterval = setInterval(updateTimer, 1000);
 });
 
 function updateTimer() {
